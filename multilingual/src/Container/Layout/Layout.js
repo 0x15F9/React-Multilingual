@@ -1,4 +1,5 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
 import Navbar from './Navbar/Navbar';
 import Footer from './Footer/Footer';
@@ -10,10 +11,10 @@ const Layout = (props) => {
     return (
         <div>
             <Navbar />
-                <Home />
-                {/* TODO: Remove */}
-                <hr /> 
-                <About />
+            < Switch>
+                <Route exact path='/' component={Home} />
+                <Route path='/about' component={About} />
+            </Switch>
             <Footer />
         </div>
     )
