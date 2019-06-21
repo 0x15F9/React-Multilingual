@@ -11,6 +11,8 @@ const Layout = (props) => {
     return (
         <div>
             <Navbar />
+            <div onClick={() => props.changeLanguage('fr')} >Fr</div>
+            <div onClick={() => props.changeLanguage('en')} >En</div>
             < Switch>
                 <Route exact path='/' component={Home} />
                 <Route path='/about' component={About} />

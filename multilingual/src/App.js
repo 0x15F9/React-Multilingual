@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
 import messages_en from "./Assets/Language/en.json";
@@ -12,15 +12,24 @@ const messages = {
     'fr': messages_fr
 };
 
-function App() {
-  return (
-    <IntlProvider locale='en' messages={messages['fr']}>
-      <BrowserRouter className="App">
-        <Layout />
-      </BrowserRouter>
-    </IntlProvider>
+class App extends Component {
+  state = {
+    lang: 'en'
+  }
 
-  );
+  changeLanguage = (l) => {
+    this.setState({...this.state, lang: l});
+  }
+
+  render() {
+    return (
+      <IntlProvider locale='en' messages={messages[this.state.lang]}>
+        <BrowserRouter className="App">
+          <Layout changeLanguage={(l) => this.changeLanguage(l)} />
+        </BrowserRouter>
+      </IntlProvider>
+    );
+  }
 }
 
 export default App;

@@ -3,11 +3,11 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <footer class="page-footer">
-          <div class="container">
+        <footer className="page-footer">
+          <div className="container">
           </div>
-          <div class="footer-copyright">
-            <div class="container center-align">
+          <div className="footer-copyright">
+            <div className="container center-align">
             Made by Isfaaq G.
             </div>
           </div>

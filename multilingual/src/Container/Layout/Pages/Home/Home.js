@@ -5,17 +5,17 @@ const Home = () => {
     return (
         <div>
             
-            <div class="card-panel center-align">
+            <div className="card-panel center-align">
                 <h1><FormattedMessage id="home.title" /></h1>
                 <h2><FormattedMessage id="home.subtitle" /></h2>
-                <div class="preloader-wrapper active">
-                <div class="spinner-layer spinner-red-only">
-                    <div class="circle-clipper left">
-                        <div class="circle"></div>
-                    </div><div class="gap-patch">
-                        <div class="circle"></div>
-                    </div><div class="circle-clipper right">
-                        <div class="circle"></div>
+                <div className="preloader-wrapper active">
+                <div className="spinner-layer spinner-red-only">
+                    <div className="circle-clipper left">
+                        <div className="circle"></div>
+                    </div><div className="gap-patch">
+                        <div className="circle"></div>
+                    </div><div className="circle-clipper right">
+                        <div className="circle"></div>
                     </div>
                     </div>
                 </div>
