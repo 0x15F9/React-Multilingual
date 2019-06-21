@@ -17,7 +17,8 @@ class App extends Component {
     lang: 'en'
   }
 
-  changeLanguage = (l) => {
+  changeLanguage = () => {
+    const l = this.state.lang === 'en' ? 'fr' : 'en';
     this.setState({...this.state, lang: l});
   }
 
@@ -25,7 +26,7 @@ class App extends Component {
     return (
       <IntlProvider locale='en' messages={messages[this.state.lang]}>
         <BrowserRouter className="App">
-          <Layout changeLanguage={(l) => this.changeLanguage(l)} />
+          <Layout changeLanguage={() => this.changeLanguage()} />
         </BrowserRouter>
       </IntlProvider>
     );
