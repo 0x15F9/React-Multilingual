@@ -4,8 +4,9 @@ import { FormattedMessage } from 'react-intl';
 
 const Navbar = (props) => {
     return (
+        
         <nav>
-            <div className="nav-wrapper">
+            <div className="container nav-wrapper">
             <a href="/" className="brand-logo">Logo</a>
             <ul id="nav-mobile" className="right hide-on-med-and-down">
                 <li><Link to='/'><FormattedMessage id="home.title" /></Link></li>

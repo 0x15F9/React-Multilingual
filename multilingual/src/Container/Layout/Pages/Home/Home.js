@@ -3,7 +3,7 @@ import { FormattedMessage } from 'react-intl';
 
 const Home = () => {
     return (
-        <div>
+        <div  className="container">
             
             <div className="card-panel center-align">
                 <h1><FormattedMessage id="home.title" /></h1>
